@@ -51,7 +51,7 @@ RUN apt-key adv --recv-keys --keyserver hkp://pool.sks-keyservers.net:80 0xA5D32
 RUN apt-get update -qq \
     && apt-get install -y -q --no-install-recommends \
            git-annex-standalone \
-           datalad \	
+           datalad \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 

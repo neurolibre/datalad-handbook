@@ -27,6 +27,7 @@ RUN apt-get update -qq \
            bc \
            dc \
            file \
+           gnupg \
            libfontconfig1 \
            libfreetype6 \
            libgl1-mesa-dev \

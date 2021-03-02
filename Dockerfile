@@ -20,7 +20,7 @@ RUN apt-get update -qq \
     && sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen \
     && dpkg-reconfigure --frontend=noninteractive locales \
     && update-locale LANG="en_US.UTF-8" \
-    && chmod 777 /opt && chmod a+s /opt \
+    && chmod 777 /opt && chmod a+s /opt
 
 RUN apt-get update -qq \
     && apt-get install -y -q --no-install-recommends \

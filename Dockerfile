@@ -46,13 +46,14 @@ RUN apt-get update -qq \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* 
 
-# install git-annex and datalad
+# install git-annex, datalad and other datalad handbook utilities
 RUN wget -O- http://neuro.debian.net/lists/bionic.us-nh.full | tee /etc/apt/sources.list.d/neurodebian.sources.list
 RUN apt-key adv --recv-keys --keyserver hkp://pool.sks-keyservers.net:80 0xA5D32F012649A5A9
 RUN apt-get update -qq \
     && apt-get install -y -q --no-install-recommends \
            git-annex-standalone \
            datalad \
+	   tree \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 

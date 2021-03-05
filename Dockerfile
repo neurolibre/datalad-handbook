@@ -59,6 +59,10 @@ RUN apt-get update -qq \
 
 RUN apt-get update -qq && apt-get install -y -q python3-pip
 RUN pip3 install --no-cache-dir PyGithub
+
+# configure default git identity
+RUN git config --global user.name "Jovyan" & git config --global user.email jovyan@example.com
+
 #binderhub specific https://mybinder.readthedocs.io/en/latest/tutorials/dockerfile.html
 RUN pip3 install --no-cache-dir \
 	Cython==0.29.20 \

@@ -6,4 +6,7 @@ Interactive [Datalad](http://docs.datalad.org/en/stable/) environment, intendede
 # Instructions
 
 [Click here](https://binder-mcgill.conp.cloud/v2/gh/neurolibre/datalad-handbook/master?urlpath=%2Fterminals%2F1) to open a new terminal.
+
+Type ```bash``` in the command line.
+
 It should be ready to use with all Datalad command line tools.

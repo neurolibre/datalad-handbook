@@ -52,13 +52,14 @@ RUN apt-key adv --recv-keys --keyserver hkp://pool.sks-keyservers.net:80 0xA5D32
 RUN apt-get update -qq \
     && apt-get install -y -q --no-install-recommends \
            git-annex-standalone \
-           datalad \
+           datalad\
 	   tree \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-#binderhub specific https://mybinder.readthedocs.io/en/latest/tutorials/dockerfile.html
 RUN apt-get update -qq && apt-get install -y -q python3-pip
+RUN pip3 install --no-cache-dir PyGithub
+#binderhub specific https://mybinder.readthedocs.io/en/latest/tutorials/dockerfile.html
 RUN pip3 install --no-cache-dir \
 	Cython==0.29.20 \
 	notebook==5.7.10 \
